@@ -29,10 +29,10 @@ class GoogleUrlShortener implements UrlShortener
             }
         }
         catch (RequestException $exception) {
-            var_dump($exception);
+//            var_dump($exception);
         }
 
-        return '';
+        return $url;
     }
 
     protected function getUrl():string

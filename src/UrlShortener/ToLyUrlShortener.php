@@ -24,23 +24,23 @@ class ToLyUrlShortener implements UrlShortener
             $response = $client->request('GET', '?json=1&longurl='.urlencode($url));
 
             if ($response->getStatusCode() == 200) {
-                return $this->getResponseShortUrl($response);
+                return $this->getResponseShortUrl($response, $url);
             }
         }
         catch (RequestException $exception) {
 
         }
 
-        return '';
+        return $url;
     }
 
-    protected function getResponseShortUrl(Response $response):string
+    protected function getResponseShortUrl(Response $response, $url):string
     {
         $data = $response->getBody()->getContents();
         $data = str_replace('(', '', $data);
         $data = str_replace(')', '', $data);
 
         $response = json_decode($data);
-        return $response ->shorturl;
+        return ($response->shorturl != 'http://to.ly/') ? $response->shorturl : $url;
     }
 }

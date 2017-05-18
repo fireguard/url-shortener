@@ -43,4 +43,13 @@ class GoogleUrlShortenerTest extends TestCase
 
         $this->assertEquals($baseUrl, (string) $newUrl);
     }
+
+    public function testInvalidKey()
+    {
+        $baseUrl = 'https://www.google.com.br/';
+        $shortener = new GoogleUrlShortener('INVALID_KEY');
+        $url = $shortener->shorten($baseUrl);
+        $this->assertEquals($baseUrl, $url);
+
+    }
 }
