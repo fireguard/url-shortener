@@ -1,0 +1,15 @@
+{
+    "name": "fireguard/url-shortener",
+    "description": "Url Shortener.",
+    "keywords": ["url", "shortener", "shorter"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fireguard\\UrlShortner\\": "src/UrlShortener/"
+        }
+    }
+}
