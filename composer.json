@@ -11,5 +11,9 @@
         "psr-4": {
             "Fireguard\\UrlShortener\\": "src/UrlShortener/"
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.1",
+        "vlucas/phpdotenv": "^2.4"
     }
 }
