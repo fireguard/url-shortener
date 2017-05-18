@@ -1,7 +1,26 @@
 # URL Shortener
 
+## Installation
+This Package can be installed through the composer.
+
+In order for the package to be automatically added to your composer.json file, run the following command:
+
+```php
+  composer require fireguard/url-shortener
+```
+Or if you prefer, add the following snippet manually:
+```php
+{
+  "require": {
+    ...
+    "fireguard/url-shortener": "^0.1"
+  }
+}
+```
 
 ## Usage
+
+Basic instructions for usage.
 
 ### Google URL Shortener
 
